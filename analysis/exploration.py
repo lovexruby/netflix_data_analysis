@@ -36,6 +36,8 @@ print(df.dtypes)
 
 # Transform 'date_added' into 'datetime64'
 print(df['date_added'].dtype)
+
+
 df['date_added'] = pd.to_datetime(df['date_added'].str.strip(), errors = 'coerce')
 # Test
 print("\nDatatype of 'date_added':", df['date_added'].dtype)
